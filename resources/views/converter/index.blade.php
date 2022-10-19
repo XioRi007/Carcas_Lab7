@@ -1,3 +1,3 @@
 @extends('layout')
-<h1>Converter form</h1>
+<h1 class="text-center mt-3">Converter form</h1>
 @include("converter.form")
