@@ -3,7 +3,7 @@
         @csrf
         
         @if (Session::has('Converted'))
-            <div>
+            <div class="border-0 d-flex justify-content-center align-items-center">
                 Converted value = {{ Session::get('Converted') }}
             </div>
         @endif
