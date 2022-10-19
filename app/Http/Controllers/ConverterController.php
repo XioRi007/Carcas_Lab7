@@ -35,6 +35,9 @@ class ConverterController extends Controller
             var_dump($result);
             $response = redirect(route("converter.index"));
             $request->session()->flash("Converted", $result);
+            $request->session()->flash("currency_from", $request->currency_from);
+            $request->session()->flash("currency_to", $request->currency_to);
+            $request->session()->flash("sum", $request->sum);
         } catch (\Exception $exception) {
             var_dump($exception);
             $response = redirect(route("converter.index"));

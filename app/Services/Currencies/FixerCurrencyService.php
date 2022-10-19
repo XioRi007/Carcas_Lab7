@@ -52,7 +52,7 @@ class FixerCurrencyService implements CurrencyContract
     {
         $data = $this->callApi("convert?to=".$to."&from=".$from."&amount=".$sum);
         $result = $data['result'];
-        return $result;
+        return round($result, 2);
     }
 
     /**
